@@ -1,0 +1,4 @@
+Q.  Glide Model -> System UI → UI Macros
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_ui_macro.do%3Fsys_id%3Daa3f6bbec3026650dbc11c65e4013172%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3De34b6f7ac3026650dbc11c65e40131d0%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+    Then create Object -> CS -> Get UI Macros name to Object.

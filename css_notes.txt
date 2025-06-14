@@ -1,0 +1,1 @@
+Q1. What is CSS?\nQ2. Types of selectors in CSS?

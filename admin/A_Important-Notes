@@ -2,3 +2,7 @@ Q.  Glide Model -> System UI → UI Macros
     https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_ui_macro.do%3Fsys_id%3Daa3f6bbec3026650dbc11c65e4013172%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
     https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3De34b6f7ac3026650dbc11c65e40131d0%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
     Then create Object -> CS -> Get UI Macros name to Object.
+
+    If we have used GlideModal & Alert on one condition that when our category will change both will trigger. But we have first decalare Glide Modal then alert. So in this first alert will show then GlideModal. 
+    ✅ **alert()** is synchronous — it blocks everything until you click “OK”.
+    🕒 **GlideModal** is asynchronous — it starts loading but doesn’t stop or block the script.

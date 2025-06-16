@@ -29,14 +29,15 @@ A.  Server Side scripts when record is displayed, inserted, updated and deleted 
     Ex - Add Comment When Category Changes.
          Auto-close Related Tasks if Incident is Resolved.
          https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script.do%3Fsys_id%3D9d8e5457c30aa650dbc11c65e40131a7%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
-    Async - Async BR runs after record are inserted, modified OR queried.
+    Async - Async BR runs after record are inserted, modified OR queried. OR If you want to insert/update multiple records (like category, CI, audit logs, etc.) at the same time.
+            https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script.do%3Fsys_id%3Dfe28acebc30ee650dbc11c65e40131f0%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
     Display - Display BR runs when data is read from the database & before presenting to the User.
               LifeCycle of Display -> 
               User opens form ➡️ Data fetched from DB ➡️ Display BR runs ➡️ Data passed to client ➡️ Client Scripts run.
               It runs on the server, but its main use is to pass data from server to client-side
               This is done using the special object: **g_scratchpad**.
               https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D5855651fc34ea650dbc11c65e40131b8%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
-
+              https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3De9e7dca3c3cae650dbc11c65e4013190%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
     Uses of g_scratchpad.
     Because you cannot use GlideRecord directly in client-side scripts — it’s server-side only.
     So, you use Display BR to fetch server data and pass it to Client Script using g_scratchpad.

@@ -4,7 +4,7 @@ A.  Server Side scripts when record is displayed, inserted, updated and deleted 
     Runs on server side.
     Runs with all thw ways where record is accessed like List, Form or web services.
 
-    Inset - So if some user is inserting the data & we want to take some action.
+    Insert - So if some user is inserting the data & we want to take some action.
     Update - If some user updating some data & we want to take some action.
     Delete - If some user want to delete some data & we want to take some action.
     Query - If we click on module which shows a list of incident it's similar the query you are doing so what if you want some kind of check when user quering a data in that case we can use it.

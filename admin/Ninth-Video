@@ -1,0 +1,53 @@
+Q.  What is Business Rule?
+A.  Server Side scripts when record is displayed, inserted, updated and deleted or when table is queried.
+    Used to change values in the fields when specific condition is met.
+    Runs on server side.
+    Runs with all thw ways where record is accessed like List, Form or web services.
+
+    Inset - So if some user is inserting the data & we want to take some action.
+    Update - If some user updating some data & we want to take some action.
+    Delete - If some user want to delete some data & we want to take some action.
+    Query - If we click on module which shows a list of incident it's similar the query you are doing so what if you want some kind of check when user quering a data in that case we can use it.
+            Ex - If I click on incident I do not want some specific users to see all the data in that case we can put query & we can put condition thats what we can do here Or may be we can put some action here.
+
+    Role Condition -  It will decide the role of the user who will generates that event basically so a user should have that mentioned role.
+                      So if there is business role which is specifically for particular role & if logged in user does not have that role then you will not run this rule.
+
+    When to run BR - 
+    Before - So if some user is inserting the data & we want to take some action. OR It runs before the record is saved to the database. We can use this to valiadate the fields.
+            Ex - Let’s say you want to stop users from creating an incident without a short description.
+                 Auto-set state = New if not selected.
+                 https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script.do%3Fsys_id%3D7e04b343c346a650dbc11c65e4013121%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+    After - After BR excutes when form is submitted & record is updated in the database.
+    | Step | What happens                                       |
+    | ---- | -------------------------------------------------- |
+    | 1️⃣  | User fills the **Incident form**                   |
+    | 2️⃣  | Clicks **Submit** or **Update**                    |
+    | 3️⃣  | ServiceNow saves the data into the DB              |
+    | 4️⃣  | Then **After BR executes**                         |
+    | 5️⃣  | Now you can access the saved record, sys_id, etc.  |
+    Ex - Add Comment When Category Changes.
+         Auto-close Related Tasks if Incident is Resolved.
+         https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script.do%3Fsys_id%3D9d8e5457c30aa650dbc11c65e40131a7%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+    Async - Async BR runs after record are inserted, modified OR queried.
+    Display - Display BR runs when data is read from the database & before presenting to the User.
+              LifeCycle of Display -> 
+              User opens form ➡️ Data fetched from DB ➡️ Display BR runs ➡️ Data passed to client ➡️ Client Scripts run.
+              It runs on the server, but its main use is to pass data from server to client-side
+              This is done using the special object: **g_scratchpad**.
+              https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D5855651fc34ea650dbc11c65e40131b8%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+
+    Uses of g_scratchpad.
+    Because you cannot use GlideRecord directly in client-side scripts — it’s server-side only.
+    So, you use Display BR to fetch server data and pass it to Client Script using g_scratchpad.
+
+    Order - It is sequencing of running the BR. So if you have like multiple business rule & you want to run those business rule with some sequence & you don't want all the BR should run every time then we can select this order.
+
+    How BR Works - 
+    When to run BR  ->  What action need to be taken.  ->  Action taken. 
+
+    Global variable of BR - 
+    Current - It stores current records field & values.
+    Previous - If we are changing or updating a data & we want to get old values then it will be saved in previous
+    g_scratchpad - If we want to get some field value from server side to client side then we can
+    gs - 

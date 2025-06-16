@@ -51,3 +51,13 @@ A.  Server Side scripts when record is displayed, inserted, updated and deleted 
     Previous - If we are changing or updating a data & we want to get old values then it will be saved in previous
     g_scratchpad - If we want to get some field value from server side to client side then we can
     gs - 
+
+
+
+Q.  What is GlideAggregate?
+A.  GlideAggregate is a powerful server-side API in ServiceNow that allows you to perform aggregate queries like:
+    COUNT(), AVG(), SUM(), MIN(), MAX()
+    It's basically like GlideRecord, but optimized to retrieve summary data from the database.
+    Use-Case:
+    Count total incidents in system-
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D64f50063c38ae650dbc11c65e401319c%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D1%26sysparm_record_rows%3D84%26sysparm_record_list%3Dtable%253dincident%255eORtableINincident%252ctask%255eORDERBYDESCsys_created_on

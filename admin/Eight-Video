@@ -1,0 +1,15 @@
+Q.  What is UI Policy? 
+A.  UI Policy is used to change the behaviour of information on the form.
+    Runs at client side.
+    It is primarly used to make fields mandatory, read-only & Visible on the platform.
+    No scripting required. Only advanced changes required scripting.
+
+    Scripting is UI Policy-
+    Scripting in UI Policy enable a developer to create a complex conditions & excute advanced behaviour.
+    Any behaviour addition to configurable functionality needs scripting.
+
+    OOB( Out of Box ) UI Policy-
+    ServiceNow has developed OOB UI Policy which are baseline UI Policy.
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_ui_policy.do%3Fsys_id%3D55aae347c306a650dbc11c65e40131a9%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_view%3Dadvanced%26sysparm_view_forced%3Dtrue
+
+    

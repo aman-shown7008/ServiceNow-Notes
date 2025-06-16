@@ -1,0 +1,71 @@
+Need of Scripting-
+It can be done in Servicenow to customize the instance of JS.
+ServiceNow provides classess and methods which can be used to enhance and customize the platform functionality.
+The JS is used in servicenow is based on mozilla rhino.
+
+When to write scripting - 
+Need addition to out of box functionality.
+Need intregation with other application.
+Need to do automation.
+
+When we should do scripting - 
+Show an alert if field value changes and push the value of refrence field value.
+Copy comment from parent to child.
+Don't resolve the incident if child tasks are open.
+Show assignment group values as per the assignment groups.
+Push the field value on change of other field value.
+
+Where we should not do scripting-
+Make a field read only.
+Hide a field when form loads.
+Set the value of field when assignement group changes.
+
+Types of Scripting - 
+Server Side Scripting.
+Client Side Scripting.
+Mid Server Scripting.
+
+Client Side Scripting - 
+Ajax Client Script.
+UI Policy.
+Service Catalog UI Policy.
+Client Scripts.
+UI Actions.
+UI Context Menus.
+Valiadation Scripts.
+
+Server Side Scripting - 
+Access Control List
+Ajax Server Script
+Business Rule 
+Scripts Action
+Scripts Include 
+Transform Map
+UI Action 
+Workflow editor 
+UI Context Menus
+
+Glide Classes - 
+ServiceNow Provide JS classes exposed by Glide 
+You can work with table using scripts with the help of these API.
+You can perform database operations with these Glide API.
+Types of it-
+Server Side Glide Classes- 
+Glide Record, 
+Glide System, 
+Glide Element,
+Glide Data Time,
+Glide Aggregate. - If you want to count sum of records
+
+Client Side Glide Classes-
+Glide Ajax,
+Glide User,
+Glide Menu,
+Glide List2,
+Glide Form,
+GlideDialog Window
+
+Syntax Editor Macros-
+Macros provide shortcut for commonly used scripts.
+It can be inserted in scripts editor with a text saved in macros.
+If there is some code & we are using it every day OR every week so we can put it over here.

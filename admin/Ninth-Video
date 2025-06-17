@@ -64,3 +64,9 @@ A.  GlideAggregate is a powerful server-side API in ServiceNow that allows you t
     https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D64f50063c38ae650dbc11c65e401319c%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D1%26sysparm_record_rows%3D84%26sysparm_record_list%3Dtable%253dincident%255eORtableINincident%252ctask%255eORDERBYDESCsys_created_on
     Show Related Incident Count on Form (Client Side)-
     https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3De9e7dca3c3cae650dbc11c65e4013190%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+
+
+
+Q.  What is Glide Ajax.
+A.  It is used to get information from server side to client side by scripts Include.
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3Db9257573c3866a50dbc11c65e4013124%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull

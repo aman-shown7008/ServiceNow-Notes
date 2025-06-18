@@ -5,3 +5,54 @@
 28. https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_security_acl.do%3Fsys_id%3Dcf11c8c4c352aa50dbc11c65e40131ba%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
 
 29. https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script.do%3Fsys_id%3Df3b21848c392aa50dbc11c65e40131da%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D2%26sysparm_record_rows%3D111%26sysparm_record_list%3Dcollection%253dincident%255eORcollectionINincident%252ctask%255eORDERBYname
+
+30. 
+
+31. https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_ui_action.do%3Fsys_id%3D8ccb6284c39eaa50dbc11c65e401316a%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D1%26sysparm_record_rows%3D55%26sysparm_record_list%3Dtable%253dincident%255eORtableINincident%252ctask%255eORDERBYDESCsys_created_on
+
+32. https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_ui_action.do%3Fsys_id%3Db708f288c3deaa50dbc11c65e4013146%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+
+33. 
+
+34. (function() {
+    var callerCountMap = {};
+    var inc = new GlideRecord('incident');
+    inc.addNotNullQuery('caller_id');
+    inc.query();
+    while (inc.next()) {
+        var callerSysId = inc.caller_id.toString();
+        var callerName = inc.caller_id.getDisplayValue();
+
+        if (!callerCountMap[callerSysId]) {
+            callerCountMap[callerSysId] = {
+                name: callerName,
+                count: 1
+            };
+        } else {
+            callerCountMap[callerSysId].count += 1;
+        }
+    }
+    for (var caller in callerCountMap) {
+        gs.print(callerCountMap[caller].name + ' - ' + callerCountMap[caller].count + 'incident');
+    }
+  })();
+
+35. 
+
+36. https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_ui_action.do%3Fsys_id%3De884d388c352ea50dbc11c65e4013104%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+
+37. var userId = gs.getUserID();
+// console.log(userId);
+
+var gr = new GlideRecord('Valeria Lingbeek');
+gr.addQuery('user', userId);
+gr.query();
+
+var count = 0;
+while(gr.next()){
+	count++;
+}
+
+gs.print("The current User has "+ count + " roles.");
+
+38. 

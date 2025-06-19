@@ -1,1 +1,19 @@
+Q.  What is Service Catalog ?
+A.  Catalog to provide users with self service options.
+    Portal where users can request different services provided by different business unit in the organization.
+    Used to support request management.
 
+
+
+Q.  What is Terms & Roles?
+A.  Terms - 
+    Excution Plans - It defines how something gets delivered.
+    Excution Plan Tasks - It represent a step in the excution plan, they are associated with a fulfillment group, & have an approximate duration.
+    Fullfillment Groups - It is a work execution tasks. For ex - One group can activate a cell phone while different group installs the desktop software.
+    Tickets - Tickets represent work done by Fullfillment groups as a part of an excution plans.
+
+    Roles - 
+    Admin - It has all access of servicenow so they can also manage service catalog. So we don't have to provide any additional role for admin.
+    Catalog-Admin - So the person we will have like catalog admin who will have administrative role for service catalog.
+    Catalog-Manager - It can manage or update the service catalog so this catalog manager so its not admin for whole catalog service application.
+    Catalog-Editor - It is one who can edit and update the service catalog as well as you can also update the categories and catalog items within that catalog.

@@ -17,3 +17,41 @@ A.  Terms -
     Catalog-Admin - So the person we will have like catalog admin who will have administrative role for service catalog.
     Catalog-Manager - It can manage or update the service catalog so this catalog manager so its not admin for whole catalog service application.
     Catalog-Editor - It is one who can edit and update the service catalog as well as you can also update the categories and catalog items within that catalog.
+
+
+
+Q.  What is Catalog?
+A.  Catalog is a page where user can see different services for different categories & request those items.
+    Section to onboard different items for request.
+    Multiple service catalogs enable your organization to offer different sets of service to different teams within the organization, such as IT service, Human service and Facilities management.
+
+
+
+Q.  What are categories?
+A.  Categories organizes catalog items in logical groups.
+    Ex - IT, Finance, HR.
+    Catalog Item can be tagged to multiple categories.
+
+
+
+Q.  What is Dynamic Categories?
+A.  Dynamic Categories let you organize and display commonly requested items and knowledge articles.
+
+
+
+Q.  What is Catalog Item?
+A.  Catalog Item is good or service available to order from the service catalog.
+    Items can be hardware request, software request and installation, mobile, laptop, office accessories.
+    Items can also have pricing.
+    User input variables and workflow are added to catalog Item.
+    Types of Catalog Items - 
+    Record Producer - 
+    Order Guides -  
+    Content Items - 
+
+
+Q.  What are Variables?
+A.  Service Catalog variables capture and pass on information about choices a customer makes when ordering a catalog item.
+    Variables are user input or information displayed to the user for the catalog item.
+
+

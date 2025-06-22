@@ -53,5 +53,38 @@ A.  Catalog Item is good or service available to order from the service catalog.
 Q.  What are Variables?
 A.  Service Catalog variables capture and pass on information about choices a customer makes when ordering a catalog item.
     Variables are user input or information displayed to the user for the catalog item.
+    Types of Variable - 
+    Break - 
+    Chexkbox - 
+    Date - 
+    Date/Time - 
+    Duration - 
+    Email - 
+    HTML - 
+    IP Address - 
+    Label - 
+    List Collector - 
+    Look Up Multiple Choice - 
+    Look Up Select Box - 
+    Macro - 
+    Masked - 
+    Multi-line Text - 
+    Multiple Choice - 
+    Numerical Value - 
+    Refrence - 
+    Select Box - 
+    Single Line Text - 
+    UI Page - 
+    URL - 
+    Wide Single-Line Text - 
+    Yes/No - 
 
 
+
+Q.  What is Variable Attribute?
+A.  Attributes transform the behaviour of the variable.
+    max_length=10
+    max_unit=hours
+    glide_list
+    ref_ac_column=email,user_name-[refrence]
+    ref_equal_elements

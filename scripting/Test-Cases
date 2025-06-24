@@ -56,3 +56,15 @@ while(gr.next()){
 gs.print("The current User has "+ count + " roles.");
 
 38. 
+
+56. var ga = new GlideAggregate('incident');
+    ga.addAggregate('COUNT');
+    ga.groupBy('category');
+    ga.query();
+
+    while (ga.next()) {
+      var category = ga.getDisplayValue('category');
+      var count = ga.getAggregate('COUNT');
+      gs.print('Category: ' + category + ' | Count: ' + count);
+    }
+

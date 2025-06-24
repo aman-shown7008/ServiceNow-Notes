@@ -35,25 +35,22 @@
     for (var caller in callerCountMap) {
         gs.print(callerCountMap[caller].name + ' - ' + callerCountMap[caller].count + 'incident');
     }
-  })();
+    })();
 
 35. 
 
 36. https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_ui_action.do%3Fsys_id%3De884d388c352ea50dbc11c65e4013104%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
 
 37. var userId = gs.getUserID();
-// console.log(userId);
+    var gr = new GlideRecord('Valeria Lingbeek');
+    gr.addQuery('user', userId);
+    gr.query();
 
-var gr = new GlideRecord('Valeria Lingbeek');
-gr.addQuery('user', userId);
-gr.query();
-
-var count = 0;
-while(gr.next()){
+    var count = 0;
+    while(gr.next()){
 	count++;
-}
-
-gs.print("The current User has "+ count + " roles.");
+    }
+    gs.print("The current User has "+ count + " roles.");
 
 38. 
 
@@ -68,3 +65,13 @@ gs.print("The current User has "+ count + " roles.");
       gs.print('Category: ' + category + ' | Count: ' + count);
     }
 
+57. var ga = new GlideAggregate('metric_instance');
+    ga.addAggregate('SUM', 'duration');
+    ga.groupBy('definition');
+    ga.query();
+
+    while(ga.next()){
+	var defName = ga.getDisplayValue('definition');
+	var total = ga.getAggregate('SUM', 'duration');
+	gs.print(defName+" |Total Duration: "+ total+ ' seconds');
+    }

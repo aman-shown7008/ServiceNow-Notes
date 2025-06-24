@@ -75,3 +75,5 @@
 	var total = ga.getAggregate('SUM', 'duration');
 	gs.print(defName+" |Total Duration: "+ total+ ' seconds');
     }
+
+58. 

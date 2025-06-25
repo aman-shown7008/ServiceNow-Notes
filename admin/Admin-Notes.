@@ -11,24 +11,25 @@ A.  https://chatgpt.com/share/685062a6-12f4-8013-8cd0-dd17e837dec9
 Q.  Data & User Management [ Users, Roles, Group ].
 A.  https://chatgpt.com/share/68507688-af90-8013-aa74-4870d951952b
 
-
                 ┌─────────────────────┐
-                │    UI POLICY        │  ✅ Runs on form load/change
-                │  - Show/Hide        │  ✅ Makes fields mandatory/read-only
-                │  - Mandatory        │
+                │    UI POLICY        │  ✅ Runs on form load/change (UI only)
+                │  - Show/Hide        │  ✅ Mandatory/Read-only on UI
                 └────────┬────────────┘
                          ↓
                 ┌─────────────────────┐
                 │   CLIENT SCRIPT     │  ✅ Runs on load/change/submit
-                │  - g_form.setValue  │  ✅ Can override UI Policy restrictions
+                │  - g_form, g_user   │  ✅ Can override UI Policy
+                │  - GlideAjax        │
                 └────────┬────────────┘
                          ↓
                 ┌─────────────────────┐
-                │    DATA POLICY      │  ✅ Runs on record submission
-                │  - Field validation │  ✅ Ensures mandatory fields on DB/API
+                │    DATA POLICY      │  ✅ Runs on submission via UI/API
+                │  - Field validation │  ✅ Mandatory/Read-Only check for DB/API
                 └────────┬────────────┘
                          ↓
-                ┌─────────────────────┐
-                │   BUSINESS RULE     │  ✅ Final logic before DB save
-                │  - Can override all │  ✅ Runs on insert/update/query/delete
+                ┌───────────────────────────────────┐
+                │        BUSINESS RULE              │  ✅ Runs on DB ops: insert/update/delete/query
+                │  -Before / After / Async/ Display │  ✅ Final automation, overrides all
+                └───────────────────────────────────┘
+
                 └─────────────────────┘

@@ -1,0 +1,7 @@
+Q.  What is Script Include?
+A.  Store JS functions to excute on server.
+    Can be re-used in different scripts.
+    Can be called from client script.
+    Need to be called from another scripts.
+
+    

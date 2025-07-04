@@ -1,0 +1,42 @@
+Q.  Server Side Scripting = 
+A.  Server Side Scripting excutes on server and database.
+    Update a field when record is inserted.
+    Setting a value on a field when parent record is updated.
+    Valiadate the logged in user.
+    Generate Events.
+    Send Emails.
+
+    Where to use it -
+    ACL
+    Business Rule
+    Script Include
+    Transform Maps
+    Workflow
+
+    Server side classes-
+    Glide Record-
+    It is used for database operation.
+    It is used only in server side.
+    Synatx - create instance of Glide Record.
+    var gr = new Glide Record(<Table Name>);
+    Use-Case:
+    If we want to create, update, insert, delete some records.
+
+    Glide System - 
+    It is used to get information about system and current logged in user.
+    It is referred by a variable 'gs'.
+    Syntax - gs.<GlideSystemMethod>
+
+    Glide Aggregate -
+    Is is used to perform aggregation operation on the database.
+    It is extension of GlideRecord class.
+    It provide database aggregation- [ COUNT, SUM, MIN, MAX, AVG ] Queries.
+    Syntax - var agg = new GlideRecord('incident');
+    It is an extension of Glide Record class.
+    Glide DateTime,
+    Glide Element.
+
+    Fix Script - It is open coding platform where if you have some tasks.
+    Ex - If we have to update one lakh records of incidents.
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_fix.do%3Fsys_id%3D085b9090c3fda210dbc11c65e4013197%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D2%26sysparm_record_rows%3D834%26sysparm_record_list%3DORDERBYDESCsys_created_on 
+    

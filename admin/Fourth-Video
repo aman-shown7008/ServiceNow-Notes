@@ -1,0 +1,38 @@
+Q.  What is Client Scripts?
+A.  It is used to manage forms & forms field in real time.
+    It is excuted on browser.
+
+    When to use it - 
+    Show the alert when form loads.
+    Show a message when field value changes.
+    Change a field value when another field changes on the form.
+    Hide/Show choices of a field.
+    Hide/Show a section.
+
+    Types of client Script - 
+    onLoad - 
+    Script will run when form loads & before control given to the user.
+    Used when something needs to be changed on the form while it is loading.
+    onLoad() function will be automatically populated in the script field when onLoad() type is selected on the form.
+
+    OnChange - 
+    Script will run when value of any field is updated OR changed.
+    Used to perform some operation as per the field changed.
+    onChange() function will be automatically populated in the script field when onChange type is selected on the form.
+    Has parameter - control, oldValue, newValue, isLoading, isTemplate.
+
+    onSubmit - 
+    Script will run when form is submitted OR saved.
+    Used to perform valiadations before form is saved.
+    onSubmit() function will be automatically populated in the scriot field when onSubmit type is selected on the form.
+
+    onCellEdit - 
+    Script will run when field values changes on list.
+    onCellEdit() function will be automatically populated in the scripts field when onCellEdit() type is selected on the form.
+    Has Parameter - sysIDs, table, oldValues, newValue, callBack.
+    sysIDs - What the item we are editing it will hold the sysIDs of that item from the record.
+    table - table name of the edited item.
+    oldValues - the old value of the edited cell.
+    newValue - It is the value which is changing by the user now.
+    callback - It will continue excution of other related cell edits scripts thats is callback.
+    

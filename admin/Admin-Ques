@@ -1,0 +1,168 @@
+Ques asked by Me- 
+What is views & views Rule?
+
+
+
+
+Q.  How many ways Incident record can be created/inserted in ServiceNow?
+A.  Manual.
+    Record Producers.
+    Employee Self Service.
+    Inbound email actions.
+    Importing an XML/Excel etc and transforming the data.
+    Server Side Scripts( BR,WF,FIX SCRIPTS, background scripts etc)
+    Using Rest or Soap
+
+
+
+Q.  If you want to create new list in related list?
+A.  By Relationships table.
+
+
+
+3.  Which service in ServiceNow remains visible to users regardless of whether any role is assigned to it or not?
+A.  Self service or service catalog.
+
+
+
+4.  What is reference qualifiers, its types & Where can we use it.
+A.  
+
+
+1.relationship btw incident and problem
+2.how to create standard change?
+3.life cycle of the emergency change and explain each and every state
+4.prevent user to change state (user can not go into previous state) - scripting
+5.script action
+6.transform script type and transform event and execution 
+7.coalesce field (if we applied on the multiple field then what will happen?)
+8.integration (scripted rest api and rest message)
+9.authentication
+10.ng-template
+11.how to send data server to client (portal)
+12.async and after BR diff
+13.event method and event schedule 
+14.table name  of standard change 
+15.validation when we submit form (how will you do)
+16.what is glideAjax
+17. how many ways to open modal? (can we use glidemodal on portal)
+18.scripting question (creating nested obj)
+How to set value in a field with the help of ui policy without script
+2. what are the ui actions and what's the use of it
+3. what's the data management and user management 
+3. what's the best practice for role assign
+4. print the incident record on the basis of priority 
+5. types of client script
+6. types of business rules
+7. what's the script include and what's the use of it
+8. write code for script include and call it in client script
+9. what's the best practice for business rules
+10.  types of acl
+11. what's the acl and what's the use of it
+12. how serviceNow checks on which role what to show
+13. how to hide modules without changing role of the user
+14. how to create new application module
+15. how to create child table
+16. how to extend table
+17. how will do that this module visible only a specific user
+ 18. types of business rules
+1. UI Policy & client script differences and their benefits over each other.
+2. UI actions, its usage, condition field, Workspaces section
+3. UI actions script- how to segregate client side portion and server side portion
+4. Ways to trigger notifications
+5. How to make any incident field anchor element (like incident number on listing page)
+6. What are views? how to make different views for different roles ?
+7. In how many ways we can update multiple records in incident table whose category is software to other category ?
+8. What is service catalog ? Workflows, Flows difference.
+9. Glide Aggregate question to count "software" category & group by category and count of each.
+why visibilty is not there in data policy
+what is use of parent field in user group
+what is better glide Ajax or g_scratchpad and why
+types of ACl and one screnario based question based on that
+how to create reference links and fields in any form
+what is role required for ACL
+Can we used two times dot walk to fetch caller manager name
+what is datalookuprules
+what is gsftsubmit
+can admin override security admin role for acl
+order of execution of business rule,client script,ui policy
+how task realted links to create in form
+how to create view rule
+What is turnstile workflow activity?
+what is rollback in workflow
+
+
+
+
+Integration & ITSM
+
+Integration
+what is rest message
+what is table api
+what is import set api
+scripted rest and soap api
+connection and credientals
+types of authentication
+mid server
+attachement in rest messaage
+refresh token and access token where they store in serviceNow table name
+application registory
+error handling in integration
+ 
+ 
+Itsm
+ 
+flow designer
+sub flow
+rest step
+soap step
+error handling in flow designer
+change lifecycle
+problem lifecycle
+incident lifecycle
+catalog
+record producer
+order guide
+transform map
+concurrent transform map
+notification push provider notification 
+email template
+
+  What is difference between path parm and Query parm
+  Diff between Rest Message and Rest Script.   ( Which one is Inbound or Outbound)
+  What we do in Rest Script and Rest Message
+  How many ways to send a Notification
+  (Write a background script to send a notification)
+  ( What is Event in detail)
+ You are Business owner and you have an incident now on resolved state caller will get one notification and on other state he will get 3 notification (on different time intervals) after 24 hours incident will automatically closed and at that time caller will  get notification. What will be the best approach in this case.
+ When we create incident, we have parent incident and multiple child incidents. At the time of parent incident creation or updation in child incident also that value will be reflected with alert
+How can the refresh token generation process be automated for end users (Dynamically)?
+What is the difference between a refresh token and an access token?
+explain the difference between incident and problem management in ServiceNow.
+controlling UI actions based on user roles. (eg. Itil_admin has only access to create new incident)
+the importance of configuration items
+How to create problem in incident 
+Spotify Integration in detail
+ Service Catalog in detail
+ Change lifecycle
+ Incident lifecycle
+Problem lifecycle
+ Inbound v/s Outbound
+ Rest v/s Soap
+How to map Reference field in ebounding integration
+Diff between access and refresh token
+What happen when access token get expired
+Where does access and refresh token get store
+Diff ways to map the data while doing inbound integration
+Relative path in scripted rest api
+steps being involve while sending data from servicenow to 3rd party
+Bidirectional recursion loop (Hint: isInteractive)
+Transform function in flow designer
+How to get access to variable using script
+How can we restrict the visibility of catalog item ( Hint : User Criteria)
+How can we create problem or incident from change
+CAB vs ECAB
+Close problem whenever all its problem task get resolved
+In ServiceNow in email notification, inside the body how we can made ServiceNow url dynamic.  Explain If Yes or Not, why 
+
+

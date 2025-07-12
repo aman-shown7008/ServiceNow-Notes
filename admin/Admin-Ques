@@ -29,6 +29,37 @@ A.  Self service or service catalog.
 A.  
 
 
+
+5.  If we want to see all servicenow tables like incident, problem, change, knowledge.
+A.  sys_db_object.list
+
+
+
+6.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 1.relationship btw incident and problem
 2.how to create standard change?
 3.life cycle of the emergency change and explain each and every state

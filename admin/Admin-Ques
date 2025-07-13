@@ -35,10 +35,16 @@ A.  sys_db_object.list
 
 
 
-6.  
+6.  How many ways we can access fields in servicenow?
+A.  sys_dictionary.list
+    incident.list -> column menu -> configure -> table -> column -> category.
+    incident.form -> right click particular field -> configure dictionary.
 
 
 
+7.  In how many ways we can create a new Field?
+A.  Form Builder
+    Table
 
 
 

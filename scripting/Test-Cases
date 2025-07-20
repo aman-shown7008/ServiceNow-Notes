@@ -1,0 +1,101 @@
+26. 
+
+27. 
+
+28. https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_security_acl.do%3Fsys_id%3Dcf11c8c4c352aa50dbc11c65e40131ba%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+
+29. https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script.do%3Fsys_id%3Df3b21848c392aa50dbc11c65e40131da%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D2%26sysparm_record_rows%3D111%26sysparm_record_list%3Dcollection%253dincident%255eORcollectionINincident%252ctask%255eORDERBYname
+
+30. 
+
+31. https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_ui_action.do%3Fsys_id%3D8ccb6284c39eaa50dbc11c65e401316a%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D1%26sysparm_record_rows%3D55%26sysparm_record_list%3Dtable%253dincident%255eORtableINincident%252ctask%255eORDERBYDESCsys_created_on
+
+32. https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_ui_action.do%3Fsys_id%3Db708f288c3deaa50dbc11c65e4013146%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+
+33. 
+
+34. (function() {
+    var callerCountMap = {};
+    var inc = new GlideRecord('incident');
+    inc.addNotNullQuery('caller_id');
+    inc.query();
+    while (inc.next()) {
+        var callerSysId = inc.caller_id.toString();
+        var callerName = inc.caller_id.getDisplayValue();
+
+        if (!callerCountMap[callerSysId]) {
+            callerCountMap[callerSysId] = {
+                name: callerName,
+                count: 1
+            };
+        } else {
+            callerCountMap[callerSysId].count += 1;
+        }
+    }
+    for (var caller in callerCountMap) {
+        gs.print(callerCountMap[caller].name + ' - ' + callerCountMap[caller].count + 'incident');
+    }
+    })();
+
+35. 
+
+36. https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_ui_action.do%3Fsys_id%3De884d388c352ea50dbc11c65e4013104%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+
+37. var userId = gs.getUserID();
+    var gr = new GlideRecord('Valeria Lingbeek');
+    gr.addQuery('user', userId);
+    gr.query();
+
+    var count = 0;
+    while(gr.next()){
+	count++;
+    }
+    gs.print("The current User has "+ count + " roles.");
+
+38. 
+
+56. var ga = new GlideAggregate('incident');
+    ga.addAggregate('COUNT');
+    ga.groupBy('category');
+    ga.query();
+
+    while (ga.next()) {
+      var category = ga.getDisplayValue('category');
+      var count = ga.getAggregate('COUNT');
+      gs.print('Category: ' + category + ' | Count: ' + count);
+    }
+
+57. var ga = new GlideAggregate('metric_instance');
+    ga.addAggregate('SUM', 'duration');
+    ga.groupBy('definition');
+    ga.query();
+
+    while(ga.next()){
+	var defName = ga.getDisplayValue('definition');
+	var total = ga.getAggregate('SUM', 'duration');
+	gs.print(defName+" |Total Duration: "+ total+ ' seconds');
+    }
+
+58. https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script.do%3Fsys_id%3Da47e2182c31a2690dbc11c65e40131ef%26sysparm_record_target%3Dsys_script%26sysparm_record_row%3D1%26sysparm_record_rows%3D5294%26sysparm_record_list%3DORDERBYDESCsys_created_on
+
+59. https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script.do%3Fsys_id%3D97fc4a4ec39a2690dbc11c65e4013185%26sysparm_record_target%3Dsys_script%26sysparm_record_row%3D1%26sysparm_record_rows%3D5295%26sysparm_record_list%3DORDERBYDESCsys_created_on
+
+60. https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script.do%3Fsys_id%3D464b9e4ac3da2690dbc11c65e4013109%26sysparm_view%3D
+
+61. https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script.do%3Fsys_id%3D2e2e16c2c31e2690dbc11c65e40131a2%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull- Not Checked.
+
+62. https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script.do%3Fsys_id%3Dac44ee4ac31e2690dbc11c65e401313c%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+
+63. https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script.do%3Fsys_id%3D606dea46c35e2690dbc11c65e4013185%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D1%26sysparm_record_rows%3D5299%26sysparm_record_list%3DORDERBYDESCsys_created_on
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D4afeee0ac35e2690dbc11c65e401315d%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D1%26sysparm_record_rows%3D2302%26sysparm_record_list%3Dsys_class_name%253dsys_script_client%255eORDERBYDESCsys_created_on
+
+64. https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D6b840bc2c3de2690dbc11c65e40131f4%26sysparm_view%3D
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script.do%3Fsys_id%3Dbb80328ac35e2690dbc11c65e40131d2%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D1%26sysparm_record_rows%3D5300%26sysparm_record_list%3DORDERBYDESCsys_created_on
+
+65. 
+
+66. 
+
+67. https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script.do%3Fsys_id%3D3df24012c3166690dbc11c65e40131a3%26sysparm_record_target%3Dsys_script%26sysparm_record_row%3D1%26sysparm_record_rows%3D5302%26sysparm_record_list%3DORDERBYDESCsys_created_on
+
+68. 

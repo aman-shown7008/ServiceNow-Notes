@@ -1,0 +1,44 @@
+Q.  Glide Form and its methods.
+A.  addDecoration - This  function is used to add an icon (decoration) next to a field on a form, along with an optional tooltip.
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D7e6adcc3c3066650dbc11c65e40131c0%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+
+    addErrorMessage() - g_form.addErrorMessage() is used in Client Scripts to display an error message at the top of the form. It’s useful when you want to warn the user or prevent form submission.
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D283c5cc3c3066650dbc11c65e401315c%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+
+    addInfoMessage() - It's like a notification for the user, but on the form itself.
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D23ce5847c3066650dbc11c65e401311b%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+
+    addOption -  This method is used to add a new option (dropdown choice) to a choice field on the form dynamically using a Client Script.
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D0b22a0cbc3066650dbc11c65e40131af%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+
+    clearOption - It is used to remove all the options from a choice/dropdown field on a form.
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3Dde04a8cfc3066650dbc11c65e40131b6%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+
+    clearValue - It clears (empties) the value of a field on the form.
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3Dde04a8cfc3066650dbc11c65e40131b6%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_view%3D
+
+    disableAttachement() - In ServiceNow to disable or enable the attachment functionality (i.e., the paperclip 📎 icon) on a form.
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3Dd74d200fc3466650dbc11c65e401317c%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+
+    flash() - It is used to temporarily highlight a field on the form by flashing it with a background color — usually yellow.
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3Db0007c8fc3466650dbc11c65e40131eb%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+
+    getControl() - It gives you access to the actual HTML DOM element (control) of a field on the form.
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3De439304bc3866650dbc11c65e4013106%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+
+    getLableOf() - g_form.getLabelOf() is used to get the label text of a specific field on a form. 
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D27ab344bc3866650dbc11c65e4013141%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+
+    getRefrence() - It’s a function used in Client Script to get extra details from a reference field like Caller, Assigned to, etc.
+                    👉g_form.getValue('caller') → gives only sys_id (not useful alone)
+                    👉g_form.getReference('caller', function(caller){ ... }) → gives all info like name, email, etc.
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D9f9dbccfc3866650dbc11c65e4013143%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+
+    getSectionName() - It’s a client-side method in ServiceNow that gives you the name of a specific section on a form using its index number.
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3Dfae50147c3c66650dbc11c65e4013166%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+
+    hideRelatedLists() - It is used in a UI Policy (onLoad) or a Client Script (onLoad) to hide the related lists at the bottom of a form (like "Incidents", "Tasks", "Changes", etc.).
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3Df699c5cfc3c66650dbc11c65e401319b%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D1%26sysparm_record_rows%3D81%26sysparm_record_list%3Dtable%253dincident%255eORtableINincident%252ctask%255eORDERBYDESCsys_created_on
+
+    getBooleanValue(), getDecimalValue(), getIntValue(), getTableName(), getUniqueValue(), getValue(), isLiveUpdating(), isMandatory(), isNewRecord(), removeDecoration(), removeOption(), save(), setDisables(), setDisplay(), setLableOf(), setManadatory(), setReadOnly(), setSectionDisplay(), setValue(), showErrorBox(), sgowFieldMessage(), showRelatedList(), submit(),  
+    
